@@ -16,7 +16,7 @@ function parseDate(dateParam) {
   else if (numRegexp.test(dateParam))
     return new Date(Number.parseInt(dateParam));
   else {
-    const date = new Date(dateParam);
+    const date = new Date(decodeURIComponent(dateParam));
     return isNaN(date) ? null : date;
   }
 }
