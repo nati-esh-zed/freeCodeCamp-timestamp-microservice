@@ -9,17 +9,16 @@ app.get("/", function (req, res) {
 });
 
 const numRegexp = /^\d+$/;
-const dateStrRegexp = /^\d{1,4}\-\d{1,2}\-\d{1,2}(?:T\d{1,2},\d{1,2},\d{1,2})?Z?$/i;
 
 function parseDate(dateParam) {
   if (dateParam == null)
     return new Date();
   else if (numRegexp.test(dateParam))
     return new Date(Number.parseInt(dateParam));
-  else if (dateStrRegexp.test(dateParam))
-    return new Date(dateParam);
-  else
-    return null;
+  else {
+    const date = new Date(dateParam);
+    return isNaN(date) ? null : date;
+  }
 }
 
 app.get("/api/:date?", function (req, res) {
