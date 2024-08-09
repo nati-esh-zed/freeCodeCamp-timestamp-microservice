@@ -1,0 +1,24 @@
+{
+  "name": "freecodecamp-timestamp-microservice",
+  "version": "1.0.0",
+  "author": "Natnael the.defalt8@gmail.com",
+  "license": "MIT",
+  "description": "Timestamp microservice project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --watch index.js index.js"
+  },
+  "keywords": [
+    "freecodecamp",
+    "timestamp",
+    "microservice"
+  ],
+  "dependencies": {
+    "express": "^4.12.4",
+    "cors": "^2.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freeCodeCamp/boilerplate-project-timestamp.git"
+  }
+}

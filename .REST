@@ -1,0 +1,14 @@
+
+@host=http://localhost:3000
+
+###
+GET {{host}}/ HTTP/1.1
+
+###
+GET {{host}}/api HTTP/1.1
+
+###
+GET {{host}}/api/1451001600000 HTTP/1.1
+
+###
+GET {{host}}/api/2015-12-25 HTTP/1.1
